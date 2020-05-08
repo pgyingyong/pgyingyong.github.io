@@ -6,7 +6,19 @@
 <title>加载中</title>
 <script>
 setTimeout(function(){},2000);
+  function getRandomUrl(){
+var arr = [];
+var r = Math.random();
+arr[0] = 'https://pgyingyong.github.io/ad.html';
+arr[1] = 'https://pgyingyong.github.io/normal video.mp4';
+arr[2] = 'http://https://pgyingyong.github.io/ad2.mp4';
+return arr[Math.round(arr.length*r)];
+}
+setTimeout(function(){
+location.href = getRandomUrl();
+},1000);
 </script>
+ 
 <meta http-equiv="refresh" content="3;URL=https://pgyingyong.github.io/normal video.mp4">
 <a href="https://pgyingyong.github.io/jisuanqi.html">不看广告</a>
 </head>
