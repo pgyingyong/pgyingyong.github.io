@@ -158,58 +158,5 @@ return(false);
 </body>
 <body>
 
- 
-    function loadStorage(id) {
-        var result = '<table border="1">';
-        for(var i = 0; i < localStorage.length; i++) {
-            var kes = localStorage.key(i);
-            var value = localStorage.getItem(kes);
-            var date = new Date();
-            date.setTime(kes);
-            var datestr = date.toGMTString();
-            result += '<tr><td>' + value + '</td><td>' + datestr + '</td></tr>'
-        }
-        result += '</table>';
-var target = document.getElementById(id);
-        target.innerHTML = result;
-    }
- 
-   
-
-
-
-</table>
-<script>
-    function add_() {
-        var person=document.createTextNode(form1.person.value);
-        var content=document.createTextNode(form1.content.value);
-        var td_person=document.createElement("td");
-        var td_content=document.createElement("td");
-        var tr=document.createElement("tr");
-        var tbody=document.createElement("tbody");
-        td_person.appendChild(person);
-        td_content.appendChild(content);
-        tr.appendChild(td_person);
-        tr.appendChild(td_content);
-        tbody.appendChild(tr);
-        var tComment = document.getElementById("comment");
-        tComment.appendChild(tbody);
-        form1.person.value="";
-        form1.content.value="";
-    }
-
-    function delete_first() {
-        var tComment=document.getElementById("comment");
-        if(tComment.rows.length>1){
-            tComment.deleteRow(1);
-        }
-    }
-
-    function delete_last() {
-        var tComment=document.getElementById("comment");
-        if(tComment.rows.length>1){
-            tComment.deleteRow(tComment.rows.length-1);
-        }
-    }
 </script>
 </body>
