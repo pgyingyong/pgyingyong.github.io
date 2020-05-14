@@ -157,20 +157,7 @@ return(false);
 <body onselectstart="return false">
 </body>
 <body>
-<h5>这里是留言板，大家可以发表自己的意见哦~</h5>
-<textarea id="memo" cols="60" rows="10"></textarea>
-<input type="button" value="追加内容" onclick="saveStorage('memo')" />
-<input type="button" value="初始化" onclick="clearStorage('msg')" />
-<hr />
-<p id="msg"></p>
-<script type="text/javascript">
-    function saveStorage(id) {
-        var data = document.getElementById(id).value;
-        var time = new Date().getTime();
-        localStorage.setItem(time,data);
-        console.log("数据已保存");
-        loadStorage('msg');
-    }
+
  
     function loadStorage(id) {
         var result = '<table border="1">';
